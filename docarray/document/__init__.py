@@ -94,24 +94,24 @@ class Document(AllMixins, BaseProtoView):
     @overload
     def __init__(
         self,
-        adjacency: Optional[int] = None,
-        blob: Optional['ArrayType'] = None,
-        buffer: Optional[bytes] = None,
-        chunks: Optional[Iterable['Document']] = None,
-        embedding: Optional['ArrayType'] = None,
-        granularity: Optional[int] = None,
-        id: Optional[str] = None,
-        location: Optional[Sequence[float]] = None,
-        matches: Optional[Iterable['Document']] = None,
-        mime_type: Optional[str] = None,
-        modality: Optional[str] = None,
-        offset: Optional[float] = None,
-        parent_id: Optional[str] = None,
-        tags: Optional[Union[Dict, StructView]] = None,
-        text: Optional[str] = None,
-        uri: Optional[str] = None,
-        weight: Optional[float] = None,
-        **kwargs,
+        adjacency: Optional[int] = None, 
+        blob: Optional['ArrayType'] = None, 
+        buffer: Optional[bytes] = None, 
+        chunks: Optional[Iterable['Document']] = None, 
+        embedding: Optional['ArrayType'] = None, 
+        granularity: Optional[int] = None, 
+        id: Optional[str] = None, 
+        location: Optional[Sequence[float]] = None, 
+        matches: Optional[Iterable['Document']] = None, 
+        mime_type: Optional[str] = None, 
+        modality: Optional[str] = None, 
+        offset: Optional[float] = None, 
+        parent_id: Optional[str] = None, 
+        tags: Optional[Union[Dict, StructView]] = None, 
+        text: Optional[str] = None, 
+        uri: Optional[str] = None, 
+        weight: Optional[float] = None, 
+        **kwargs
     ):
         """
         :param adjacency: the adjacency of this Document
@@ -133,7 +133,6 @@ class Document(AllMixins, BaseProtoView):
         :param weight: the weight of the document
         :param kwargs: other parameters to be set _after_ the document is constructed
         """
-
     # overload_inject_end_document
 
     _PbMsg = DocumentProto

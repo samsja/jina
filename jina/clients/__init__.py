@@ -14,23 +14,14 @@ if TYPE_CHECKING:
 
 # overload_inject_start_client
 @overload
-def Client(
-    *,
-    asyncio: Optional[bool] = False,
-    host: Optional[str] = '0.0.0.0',
-    https: Optional[bool] = False,
-    port: Optional[int] = None,
-    protocol: Optional[str] = 'GRPC',
-    proxy: Optional[bool] = False,
-    **kwargs
-) -> Union[
-    'AsyncWebSocketClient',
-    'WebSocketClient',
-    'AsyncGRPCClient',
-    'GRPCClient',
-    'HTTPClient',
-    'AsyncHTTPClient',
-]:
+def Client(*, 
+    asyncio: Optional[bool] = False, 
+    host: Optional[str] = '0.0.0.0', 
+    https: Optional[bool] = False, 
+    port: Optional[int] = None, 
+    protocol: Optional[str] = 'GRPC', 
+    proxy: Optional[bool] = False, 
+    **kwargs) -> Union['AsyncWebSocketClient', 'WebSocketClient', 'AsyncGRPCClient', 'GRPCClient', 'HTTPClient', 'AsyncHTTPClient']:
     """Create a Client. Client is how user interact with Flow
 
     :param asyncio: If set, then the input and output of this Client work in an asynchronous manner.
