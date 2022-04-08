@@ -17,14 +17,14 @@ def set_pod_parser(parser=None):
     from jina.parsers.hubble.pull import mixin_hub_pull_options_parser
     from jina.parsers.orchestrate.base import mixin_base_ppr_parser
     from jina.parsers.orchestrate.pod import mixin_pod_parser
-    from jina.parsers.orchestrate.runtimes.container import (
-        mixin_container_runtime_parser,
-    )
-    from jina.parsers.orchestrate.runtimes.distributed import (
-        mixin_distributed_feature_parser,
-    )
-    from jina.parsers.orchestrate.runtimes.remote import mixin_remote_runtime_parser
-    from jina.parsers.orchestrate.runtimes.worker import mixin_worker_runtime_parser
+    from jina.parsers.orchestrate.runtimes.container import \
+        mixin_container_runtime_parser
+    from jina.parsers.orchestrate.runtimes.distributed import \
+        mixin_distributed_feature_parser
+    from jina.parsers.orchestrate.runtimes.remote import \
+        mixin_remote_runtime_parser
+    from jina.parsers.orchestrate.runtimes.worker import \
+        mixin_worker_runtime_parser
 
     mixin_base_ppr_parser(parser)
     mixin_worker_runtime_parser(parser)
@@ -51,7 +51,8 @@ def set_deployment_parser(parser=None):
 
     set_pod_parser(parser)
 
-    from jina.parsers.orchestrate.deployment import mixin_base_deployment_parser
+    from jina.parsers.orchestrate.deployment import \
+        mixin_base_deployment_parser
 
     mixin_base_deployment_parser(parser)
 
@@ -72,12 +73,10 @@ def set_gateway_parser(parser=None):
     from jina.parsers.orchestrate.base import mixin_base_ppr_parser
     from jina.parsers.orchestrate.pod import mixin_pod_parser
     from jina.parsers.orchestrate.runtimes.remote import (
-        mixin_gateway_parser,
-        mixin_graphql_parser,
-        mixin_http_gateway_parser,
-        mixin_prefetch_parser,
-    )
-    from jina.parsers.orchestrate.runtimes.worker import mixin_worker_runtime_parser
+        mixin_gateway_parser, mixin_graphql_parser, mixin_http_gateway_parser,
+        mixin_prefetch_parser)
+    from jina.parsers.orchestrate.runtimes.worker import \
+        mixin_worker_runtime_parser
 
     mixin_base_ppr_parser(parser)
     mixin_worker_runtime_parser(parser)
@@ -111,11 +110,10 @@ def set_client_cli_parser(parser=None):
 
         parser = set_base_parser()
 
-    from jina.parsers.client import (
-        mixin_client_features_parser,
-        mixin_comm_protocol_parser,
-    )
-    from jina.parsers.orchestrate.runtimes.remote import mixin_client_gateway_parser
+    from jina.parsers.client import (mixin_client_features_parser,
+                                     mixin_comm_protocol_parser)
+    from jina.parsers.orchestrate.runtimes.remote import \
+        mixin_client_gateway_parser
 
     mixin_client_gateway_parser(parser)
     mixin_client_features_parser(parser)

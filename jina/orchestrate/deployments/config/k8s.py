@@ -7,12 +7,8 @@ from jina.enums import PodRoleType
 from jina.excepts import NoContainerizedError
 from jina.orchestrate.deployments import BaseDeployment
 from jina.orchestrate.deployments.config.helper import (
-    construct_runtime_container_args,
-    get_base_executor_version,
-    get_image_name,
-    to_compatible_name,
-    validate_uses,
-)
+    construct_runtime_container_args, get_base_executor_version,
+    get_image_name, to_compatible_name, validate_uses)
 from jina.orchestrate.deployments.config.k8slib import kubernetes_deployment
 from jina.serve.networking import GrpcConnectionPool
 

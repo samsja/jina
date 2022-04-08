@@ -9,9 +9,9 @@ from cli.export import api_to_dict
 from cli.lookup import _build_lookup_table, lookup_and_print
 from jina.checker import NetworkChecker
 from jina.jaml import JAML
+from jina.orchestrate.pods.factory import PodFactory
 from jina.parsers import set_deployment_parser, set_pod_parser
 from jina.parsers.ping import set_ping_parser
-from jina.orchestrate.pods.factory import PodFactory
 
 
 def test_export_api(tmpdir):

@@ -1,4 +1,4 @@
-from typing import Iterator, AsyncIterator, Union
+from typing import AsyncIterator, Iterator, Union
 
 from jina.helper import get_or_reuse_loop
 

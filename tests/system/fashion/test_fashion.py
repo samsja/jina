@@ -10,8 +10,9 @@ from jina.parsers.helloworld import set_hw_parser
 
 
 def check_hello_world_results(html_path: str):
-    from bs4 import BeautifulSoup
     import re
+
+    from bs4 import BeautifulSoup
 
     with open(html_path, 'r') as fp:
         page = fp.read()

@@ -5,7 +5,8 @@ from datetime import datetime
 from typing import Dict, List, Optional, Tuple
 
 from jina.serve.networking import GrpcConnectionPool
-from jina.serve.runtimes.request_handlers.data_request_handler import DataRequestHandler
+from jina.serve.runtimes.request_handlers.data_request_handler import \
+    DataRequestHandler
 from jina.types.request.data import DataRequest
 
 

@@ -1,6 +1,7 @@
 import time
 
 import pytest
+
 from jina.logging.profile import ProgressBar
 
 

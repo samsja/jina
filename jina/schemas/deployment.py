@@ -1,5 +1,4 @@
 from cli.export import api_to_dict
-
 from jina.schemas.helper import _cli_to_schema
 
 schema_deployment = _cli_to_schema(

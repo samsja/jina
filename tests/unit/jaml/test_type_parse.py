@@ -2,9 +2,9 @@ import os
 
 import pytest
 
-from jina.serve.executors import BaseExecutor
+from jina import Flow, __default_executor__, requests
 from jina.jaml import JAML, JAMLCompatible
-from jina import __default_executor__, requests, Flow
+from jina.serve.executors import BaseExecutor
 
 
 class MyExecutor(BaseExecutor):

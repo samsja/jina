@@ -1,8 +1,8 @@
 import urllib
+from pathlib import Path
 
 import pytest
 
-from pathlib import Path
 from jina.hubble import helper
 from jina.hubble.helper import disk_cache_offline
 from jina.parsers.hubble import set_hub_pull_parser

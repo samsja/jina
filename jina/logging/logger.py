@@ -8,10 +8,10 @@ from typing import Optional
 
 from rich.logging import RichHandler
 
-from jina.logging import formatter
-from jina import __uptime__, __resources_path__, __windows__
+from jina import __resources_path__, __uptime__, __windows__
 from jina.enums import LogVerbosity
 from jina.jaml import JAML
+from jina.logging import formatter
 
 
 class SysLogHandlerWrapper(logging.handlers.SysLogHandler):

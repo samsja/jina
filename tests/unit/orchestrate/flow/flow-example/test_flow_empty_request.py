@@ -1,4 +1,4 @@
-from jina import Flow, Executor, requests
+from jina import Executor, Flow, requests
 
 
 def test_empty_post_request(mocker):

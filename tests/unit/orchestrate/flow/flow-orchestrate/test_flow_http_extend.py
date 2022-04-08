@@ -1,6 +1,6 @@
 import pytest
 
-from jina import Executor, requests, Flow
+from jina import Executor, Flow, requests
 from jina.excepts import BadClient
 
 

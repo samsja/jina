@@ -1,11 +1,10 @@
+import imghdr
 import os
 import struct
-import imghdr
 
 import pytest
 
-from jina import Flow
-from jina import Executor
+from jina import Executor, Flow
 
 cur_dir = os.path.dirname(os.path.abspath(__file__))
 

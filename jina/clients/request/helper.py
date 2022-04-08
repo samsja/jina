@@ -1,7 +1,7 @@
 """Module for helper functions for clients."""
 from typing import Tuple
 
-from docarray import DocumentArray, Document
+from docarray import Document, DocumentArray
 
 from jina.enums import DataInputType
 from jina.excepts import BadRequestType

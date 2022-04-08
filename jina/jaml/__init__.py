@@ -10,13 +10,9 @@ from typing import Any, Dict, List, Optional, TextIO, Tuple, Union
 import yaml
 from yaml.constructor import FullConstructor
 
-from jina.jaml.helper import (
-    JinaLoader,
-    JinaResolver,
-    get_jina_loader_with_runtime,
-    load_py_modules,
-    parse_config_source,
-)
+from jina.jaml.helper import (JinaLoader, JinaResolver,
+                              get_jina_loader_with_runtime, load_py_modules,
+                              parse_config_source)
 
 __all__ = ['JAML', 'JAMLCompatible']
 

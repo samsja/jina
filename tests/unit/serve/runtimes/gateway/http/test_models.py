@@ -1,9 +1,7 @@
 import pytest
 
-from jina.serve.runtimes.gateway.http.models import (
-    PROTO_TO_PYDANTIC_MODELS,
-    JinaRequestModel,
-)
+from jina.serve.runtimes.gateway.http.models import (PROTO_TO_PYDANTIC_MODELS,
+                                                     JinaRequestModel)
 
 
 def test_schema_invocation():

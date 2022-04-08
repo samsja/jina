@@ -1,6 +1,6 @@
-from jina import Executor, DocumentArray, requests
-
 import some.missing.depdency
+
+from jina import DocumentArray, Executor, requests
 
 
 class InvalidImportExec(Executor):

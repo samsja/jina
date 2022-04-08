@@ -1,11 +1,11 @@
-import time
 import asyncio
+import time
+
+import pytest
 
 from jina import Document
 from jina.clients.request import request_generator
 from jina.serve.stream.helper import AsyncRequestsIterator
-
-import pytest
 
 
 def slow_blocking_generator():

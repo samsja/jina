@@ -6,10 +6,7 @@ from jina import __version__
 from jina.hubble import HubExecutor
 from jina.hubble.hubio import HubIO
 from jina.orchestrate.deployments.config.helper import (
-    get_base_executor_version,
-    get_image_name,
-    to_compatible_name,
-)
+    get_base_executor_version, get_image_name, to_compatible_name)
 
 
 @pytest.mark.parametrize('is_master', (True, False))

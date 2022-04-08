@@ -4,10 +4,9 @@ import pytest
 import yaml
 
 from jina import __default_executor__
-from jina.serve.executors import BaseExecutor
-from jina.helper import expand_dict
-from jina.helper import expand_env_var
+from jina.helper import expand_dict, expand_env_var
 from jina.jaml import JAML
+from jina.serve.executors import BaseExecutor
 
 cur_dir = os.path.dirname(os.path.abspath(__file__))
 

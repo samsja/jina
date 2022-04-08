@@ -1,6 +1,6 @@
 from typing import Dict
 
-from jina.helper import typename, T, TYPE_CHECKING, deprecate_by
+from jina.helper import TYPE_CHECKING, T, deprecate_by, typename
 
 if TYPE_CHECKING:
     from jina.proto import jina_pb2

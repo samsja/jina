@@ -4,14 +4,8 @@ from multiprocessing import Process
 
 import pytest
 
-from jina import (
-    Document,
-    DocumentArray,
-    Executor,
-    __default_executor__,
-    __default_host__,
-    requests,
-)
+from jina import (Document, DocumentArray, Executor, __default_executor__,
+                  __default_host__, requests)
 from jina.clients.request import request_generator
 from jina.enums import PollingType
 from jina.orchestrate.deployments import Deployment

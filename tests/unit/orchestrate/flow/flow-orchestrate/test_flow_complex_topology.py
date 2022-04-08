@@ -1,6 +1,6 @@
 import pytest
 
-from jina import Flow, Document
+from jina import Document, Flow
 
 
 @pytest.mark.parametrize('protocol', ['grpc', 'http', 'websocket'])

@@ -16,7 +16,8 @@ from jina.parsers import set_pod_parser
 from jina.proto import jina_pb2, jina_pb2_grpc
 from jina.serve.networking import GrpcConnectionPool
 from jina.serve.runtimes.asyncio import AsyncNewLoopRuntime
-from jina.serve.runtimes.request_handlers.data_request_handler import DataRequestHandler
+from jina.serve.runtimes.request_handlers.data_request_handler import \
+    DataRequestHandler
 from jina.serve.runtimes.worker import WorkerRuntime
 
 

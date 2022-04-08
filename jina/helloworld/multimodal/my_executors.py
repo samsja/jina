@@ -4,9 +4,9 @@ from typing import Dict, List
 import numpy as np
 import torch
 import torchvision.models as models
+from docarray import Document, DocumentArray
 from transformers import AutoModel, AutoTokenizer
 
-from docarray import Document, DocumentArray
 from jina import Executor, requests
 
 

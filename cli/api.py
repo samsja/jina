@@ -1,6 +1,5 @@
 from typing import TYPE_CHECKING
 
-
 if TYPE_CHECKING:
     from argparse import Namespace
 
@@ -146,9 +145,10 @@ def export_api(args: 'Namespace'):
     :param args: arguments coming from the CLI.
     """
     import json
+
     from cli.export import api_to_dict
-    from jina.jaml import JAML
     from jina import __version__
+    from jina.jaml import JAML
     from jina.logging.predefined import default_logger
     from jina.schemas import get_full_schema
 
@@ -234,7 +234,9 @@ def new(args: 'Namespace'):
     Create a new jina project
     :param args:  arguments coming from the CLI.
     """
-    import shutil, os
+    import os
+    import shutil
+
     from jina import __resources_path__
 
     shutil.copytree(

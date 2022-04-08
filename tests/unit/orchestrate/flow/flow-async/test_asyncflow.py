@@ -3,9 +3,9 @@ import time
 
 import numpy as np
 import pytest
+from docarray import Document, DocumentArray
 from docarray.document.generators import from_ndarray
 
-from docarray import Document, DocumentArray
 from jina import Executor, Flow, requests
 from jina.logging.profile import TimeContext
 from jina.orchestrate.flow.asyncio import AsyncFlow

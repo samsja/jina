@@ -3,15 +3,14 @@ from pathlib import Path
 
 import numpy as np
 import pytest
+from docarray.document.generators import from_ndarray
 
-from jina import Executor
-from jina.excepts import BadYAMLVersion
-from jina import Flow
-from jina.jaml import JAML
+from jina import Executor, Flow
 from jina.enums import GatewayProtocolType
+from jina.excepts import BadYAMLVersion
+from jina.jaml import JAML
 from jina.jaml.parsers import get_supported_versions
 from jina.parsers.flow import set_flow_parser
-from docarray.document.generators import from_ndarray
 
 cur_dir = Path(__file__).parent
 

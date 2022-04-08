@@ -7,19 +7,10 @@ import pytest
 from jina import Executor, Flow, __default_endpoint__
 from jina.clients.helper import _safe_callback, pprint_routes
 from jina.excepts import BadClientCallback, NotSupportedError
-from jina.helper import (
-    cached_property,
-    convert_tuple_to_list,
-    deprecated_alias,
-    dunder_get,
-    find_request_binding,
-    get_ci_vendor,
-    is_port_free,
-    is_yaml_filepath,
-    random_port,
-    reset_ports,
-    retry,
-)
+from jina.helper import (cached_property, convert_tuple_to_list,
+                         deprecated_alias, dunder_get, find_request_binding,
+                         get_ci_vendor, is_port_free, is_yaml_filepath,
+                         random_port, reset_ports, retry)
 from jina.hubble.helper import _get_hubble_base_url
 from jina.jaml.helper import complete_path
 from jina.logging.predefined import default_logger

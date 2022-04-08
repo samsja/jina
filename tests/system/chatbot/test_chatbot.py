@@ -1,7 +1,7 @@
 import pytest
 
 from jina import Document
-from jina.helloworld.chatbot.app import hello_world, _get_flow
+from jina.helloworld.chatbot.app import _get_flow, hello_world
 from jina.parsers.helloworld import set_hw_chatbot_parser
 from tests import validate_callback
 

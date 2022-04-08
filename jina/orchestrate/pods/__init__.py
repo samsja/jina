@@ -12,7 +12,8 @@ from jina.excepts import RuntimeFailToStart, RuntimeRunForeverEarlyError
 from jina.helper import typename
 from jina.jaml import JAML
 from jina.logging.logger import JinaLogger
-from jina.orchestrate.pods.helper import ConditionalEvent, _get_event, _get_worker
+from jina.orchestrate.pods.helper import (ConditionalEvent, _get_event,
+                                          _get_worker)
 from jina.serve.runtimes.asyncio import AsyncNewLoopRuntime
 
 __all__ = ['BasePod', 'Pod']

@@ -1,9 +1,9 @@
 import copy
 
 import pytest
+from docarray import Document, DocumentArray
 from google.protobuf.json_format import MessageToDict, MessageToJson
 
-from docarray import Document, DocumentArray
 from jina.excepts import BadRequestType
 from jina.helper import random_identity
 from jina.proto import jina_pb2

@@ -1,6 +1,6 @@
 import os
 
-from jina import Executor, requests, DocumentArray
+from jina import DocumentArray, Executor, requests
 
 
 class TestExecutor(Executor):

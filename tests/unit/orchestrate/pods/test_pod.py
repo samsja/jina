@@ -4,10 +4,10 @@ import time
 import pytest
 
 from jina.excepts import RuntimeFailToStart
-from jina.serve.executors import BaseExecutor
-from jina.parsers import set_gateway_parser, set_pod_parser
 from jina.orchestrate.pods import Pod
+from jina.parsers import set_gateway_parser, set_pod_parser
 from jina.serve import runtimes
+from jina.serve.executors import BaseExecutor
 
 
 @pytest.fixture()

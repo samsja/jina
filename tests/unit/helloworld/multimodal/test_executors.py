@@ -4,13 +4,9 @@ import pytest
 from PIL import Image
 
 from jina import Document, DocumentArray, Flow
-from jina.helloworld.multimodal.my_executors import (
-    ImageCrafter,
-    ImageEncoder,
-    Segmenter,
-    TextCrafter,
-    TextEncoder,
-)
+from jina.helloworld.multimodal.my_executors import (ImageCrafter,
+                                                     ImageEncoder, Segmenter,
+                                                     TextCrafter, TextEncoder)
 
 
 @pytest.fixture(scope='function')

@@ -4,7 +4,8 @@ import argparse
 import inspect
 import os
 from abc import ABC
-from typing import TYPE_CHECKING, AsyncIterator, Callable, Iterator, Optional, Union
+from typing import (TYPE_CHECKING, AsyncIterator, Callable, Iterator, Optional,
+                    Union)
 
 from jina.excepts import BadClientInput
 from jina.helper import T, parse_client, typename

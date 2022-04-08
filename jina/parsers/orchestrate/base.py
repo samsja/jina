@@ -2,9 +2,9 @@
 import argparse
 import os
 
-from jina.parsers.helper import add_arg_group, _SHOW_ALL_ARGS
 from jina.enums import PollingType
 from jina.helper import random_identity
+from jina.parsers.helper import _SHOW_ALL_ARGS, add_arg_group
 
 
 def mixin_base_ppr_parser(parser):

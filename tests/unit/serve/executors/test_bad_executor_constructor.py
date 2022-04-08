@@ -1,6 +1,6 @@
-from jina import Flow, Executor, requests
-
 import pytest
+
+from jina import Executor, Flow, requests
 
 
 class GoodExecutor(Executor):

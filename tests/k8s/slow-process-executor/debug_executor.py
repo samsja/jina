@@ -1,7 +1,7 @@
 import os
 import time
 
-from jina import Executor, requests, DocumentArray
+from jina import DocumentArray, Executor, requests
 
 
 class SlowProcessExecutor(Executor):
