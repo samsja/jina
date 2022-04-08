@@ -12,58 +12,31 @@ import uuid
 import warnings
 from collections import OrderedDict
 from contextlib import ExitStack
-from typing import (
-    TYPE_CHECKING,
-    Dict,
-    List,
-    Optional,
-    Set,
-    Tuple,
-    Type,
-    Union,
-    overload,
-)
+from typing import (TYPE_CHECKING, Dict, List, Optional, Set, Tuple, Type,
+                    Union, overload)
 
 from rich import print
 from rich.table import Table
 
-from jina import __default_host__, __default_port_monitoring__, __docker_host__, helper
+from jina import (__default_host__, __default_port_monitoring__,
+                  __docker_host__, helper)
 from jina.clients import Client
 from jina.clients.mixin import AsyncPostMixin, PostMixin
-from jina.enums import (
-    DeploymentRoleType,
-    FlowBuildLevel,
-    FlowInspectType,
-    GatewayProtocolType,
-)
-from jina.excepts import (
-    FlowMissingDeploymentError,
-    FlowTopologyError,
-    PortAlreadyUsed,
-    RuntimeFailToStart,
-)
-from jina.helper import (
-    GRAPHQL_MIN_DOCARRAY_VERSION,
-    ArgNamespace,
-    CatchAllCleanupContextManager,
-    colored_rich,
-    docarray_graphql_compatible,
-    download_mermaid_url,
-    get_internal_ip,
-    get_public_ip,
-    get_rich_console,
-    is_port_free,
-    typename,
-)
+from jina.enums import (DeploymentRoleType, FlowBuildLevel, FlowInspectType,
+                        GatewayProtocolType)
+from jina.excepts import (FlowMissingDeploymentError, FlowTopologyError,
+                          PortAlreadyUsed, RuntimeFailToStart)
+from jina.helper import (GRAPHQL_MIN_DOCARRAY_VERSION, ArgNamespace,
+                         CatchAllCleanupContextManager, colored_rich,
+                         docarray_graphql_compatible, download_mermaid_url,
+                         get_internal_ip, get_public_ip, get_rich_console,
+                         is_port_free, typename)
 from jina.jaml import JAMLCompatible
 from jina.logging.logger import JinaLogger
 from jina.orchestrate.deployments import Deployment
 from jina.orchestrate.flow.builder import _hanging_deployments, allowed_levels
-from jina.parsers import (
-    set_client_cli_parser,
-    set_deployment_parser,
-    set_gateway_parser,
-)
+from jina.parsers import (set_client_cli_parser, set_deployment_parser,
+                          set_gateway_parser)
 from jina.parsers.flow import set_flow_parser
 
 __all__ = ['Flow']
@@ -509,7 +482,8 @@ class Flow(PostMixin, JAMLCompatible, ExitStack, metaclass=FlowType):
         self, k8s_namespace: str
     ) -> Dict[str, List[str]]:
         graph_dict = {}
-        from jina.orchestrate.deployments.config.helper import to_compatible_name
+        from jina.orchestrate.deployments.config.helper import \
+            to_compatible_name
         from jina.serve.networking import GrpcConnectionPool
 
         for node, v in self._deployment_nodes.items():
@@ -537,7 +511,8 @@ class Flow(PostMixin, JAMLCompatible, ExitStack, metaclass=FlowType):
     def _get_docker_compose_deployments_addresses(self) -> Dict[str, List[str]]:
         graph_dict = {}
         from jina.orchestrate.deployments.config.docker_compose import port
-        from jina.orchestrate.deployments.config.helper import to_compatible_name
+        from jina.orchestrate.deployments.config.helper import \
+            to_compatible_name
 
         for node, v in self._deployment_nodes.items():
             if node == 'gateway':
@@ -1878,9 +1853,8 @@ class Flow(PostMixin, JAMLCompatible, ExitStack, metaclass=FlowType):
         output_path = output_path or 'docker-compose.yml'
         network_name = network_name or 'jina-network'
 
-        from jina.orchestrate.deployments.config.docker_compose import (
-            DockerComposeConfig,
-        )
+        from jina.orchestrate.deployments.config.docker_compose import \
+            DockerComposeConfig
 
         docker_compose_dict = {
             'version': '3.3',

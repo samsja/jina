@@ -1,16 +1,8 @@
 import argparse
 import asyncio
 import contextlib
-from typing import (
-    TYPE_CHECKING,
-    AsyncIterator,
-    Awaitable,
-    Callable,
-    Iterator,
-    List,
-    Optional,
-    Union,
-)
+from typing import (TYPE_CHECKING, AsyncIterator, Awaitable, Callable,
+                    Iterator, List, Optional, Union)
 
 from jina.logging.logger import JinaLogger
 from jina.serve.stream.helper import AsyncRequestsIterator

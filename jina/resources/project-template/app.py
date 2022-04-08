@@ -1,4 +1,5 @@
 from docarray import Document
+
 from jina import Flow
 
 f = Flow().add(uses='executor1/config.yml')

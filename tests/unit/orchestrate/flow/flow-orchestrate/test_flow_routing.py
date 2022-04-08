@@ -1,7 +1,7 @@
-from docarray import Document, DocumentArray
-from jina import Executor, Flow, requests
-
 import pytest
+from docarray import Document, DocumentArray
+
+from jina import Executor, Flow, requests
 
 
 class SimplExecutor(Executor):

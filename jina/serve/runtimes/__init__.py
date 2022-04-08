@@ -27,8 +27,8 @@ def get_runtime(name: str):
     from jina.serve.runtimes.gateway.grpc import GRPCGatewayRuntime
     from jina.serve.runtimes.gateway.http import HTTPGatewayRuntime
     from jina.serve.runtimes.gateway.websocket import WebSocketGatewayRuntime
-    from jina.serve.runtimes.worker import WorkerRuntime
     from jina.serve.runtimes.head import HeadRuntime
+    from jina.serve.runtimes.worker import WorkerRuntime
 
     s = locals()[name]
     if isinstance(s, type) and issubclass(s, BaseRuntime):

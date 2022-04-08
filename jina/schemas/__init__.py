@@ -4,10 +4,10 @@ def get_full_schema() -> dict:
     """
     from jina import __version__
     from jina.importer import IMPORTED
+    from jina.schemas.deployment import schema_deployment
     from jina.schemas.executor import schema_all_executors
     from jina.schemas.flow import schema_flow
     from jina.schemas.meta import schema_metas
-    from jina.schemas.deployment import schema_deployment
 
     definitions = {}
     for s in [

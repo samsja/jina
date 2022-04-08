@@ -13,10 +13,8 @@ from jina.importer import ImportExtensions
 from jina.logging.logger import JinaLogger
 from jina.orchestrate.helper import generate_default_volume_and_workspace
 from jina.orchestrate.pods import BasePod, _get_worker
-from jina.orchestrate.pods.container_helper import (
-    get_docker_network,
-    get_gpu_device_requests,
-)
+from jina.orchestrate.pods.container_helper import (get_docker_network,
+                                                    get_gpu_device_requests)
 from jina.serve.runtimes.asyncio import AsyncNewLoopRuntime
 
 if TYPE_CHECKING:

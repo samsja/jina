@@ -28,7 +28,8 @@ def get_fastapi_app(
     :return: fastapi app
     """
 
-    from jina.serve.runtimes.gateway.http.models import JinaEndpointRequestModel
+    from jina.serve.runtimes.gateway.http.models import \
+        JinaEndpointRequestModel
 
     with ImportExtensions(required=True):
         from fastapi import FastAPI, WebSocket, WebSocketDisconnect
@@ -102,10 +103,8 @@ def get_fastapi_app(
 
     app = FastAPI()
 
-    from jina.serve.runtimes.gateway.request_handling import (
-        handle_request,
-        handle_result,
-    )
+    from jina.serve.runtimes.gateway.request_handling import (handle_request,
+                                                              handle_result)
     from jina.serve.stream import RequestStreamer
 
     streamer = RequestStreamer(

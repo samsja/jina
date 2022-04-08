@@ -13,11 +13,8 @@ import yaml
 
 from jina.hubble.helper import disk_cache_offline
 from jina.hubble.hubio import HubExecutor, HubIO
-from jina.parsers.hubble import (
-    set_hub_new_parser,
-    set_hub_pull_parser,
-    set_hub_push_parser,
-)
+from jina.parsers.hubble import (set_hub_new_parser, set_hub_pull_parser,
+                                 set_hub_push_parser)
 
 cur_dir = os.path.dirname(os.path.abspath(__file__))
 

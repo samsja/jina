@@ -5,7 +5,8 @@ from argparse import Namespace
 from contextlib import ExitStack
 from typing import Dict, List, Optional, Set, Union
 
-from jina import __default_executor__, __default_host__, __docker_host__, helper
+from jina import (__default_executor__, __default_host__, __docker_host__,
+                  helper)
 from jina.enums import DeploymentRoleType, PodRoleType, PollingType
 from jina.helper import CatchAllCleanupContextManager
 from jina.hubble.hubio import HubIO

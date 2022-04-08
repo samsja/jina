@@ -10,7 +10,8 @@ import grpc
 
 from jina.proto import jina_pb2_grpc
 from jina.serve.runtimes.asyncio import AsyncNewLoopRuntime
-from jina.serve.runtimes.request_handlers.data_request_handler import DataRequestHandler
+from jina.serve.runtimes.request_handlers.data_request_handler import \
+    DataRequestHandler
 from jina.types.request.control import ControlRequest
 from jina.types.request.data import DataRequest
 

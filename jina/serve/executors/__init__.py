@@ -9,15 +9,11 @@ from types import SimpleNamespace
 from typing import TYPE_CHECKING, Any, Dict, List, Optional, Type, Union
 
 from jina import __args_executor_init__, __default_endpoint__
-from jina.helper import (
-    ArgNamespace,
-    T,
-    iscoroutinefunction,
-    run_in_threadpool,
-    typename,
-)
+from jina.helper import (ArgNamespace, T, iscoroutinefunction,
+                         run_in_threadpool, typename)
 from jina.jaml import JAML, JAMLCompatible, env_var_regex, internal_var_regex
-from jina.serve.executors.decorators import requests, store_init_kwargs, wrap_func
+from jina.serve.executors.decorators import (requests, store_init_kwargs,
+                                             wrap_func)
 
 if TYPE_CHECKING:
     from jina import DocumentArray

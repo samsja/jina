@@ -1,7 +1,6 @@
 import os
 import socket
-
-from typing import Optional, TYPE_CHECKING
+from typing import TYPE_CHECKING, Optional
 
 
 def get_docker_network(client) -> Optional[str]:

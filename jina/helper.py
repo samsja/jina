@@ -17,21 +17,8 @@ from datetime import datetime
 from itertools import islice
 from socket import AF_INET, SOCK_STREAM, socket
 from types import SimpleNamespace
-from typing import (
-    TYPE_CHECKING,
-    Any,
-    Callable,
-    Dict,
-    Iterable,
-    Iterator,
-    List,
-    Optional,
-    Sequence,
-    Set,
-    Tuple,
-    TypeVar,
-    Union,
-)
+from typing import (TYPE_CHECKING, Any, Callable, Dict, Iterable, Iterator,
+                    List, Optional, Sequence, Set, Tuple, TypeVar, Union)
 
 from packaging import version as pckg_version
 from rich.console import Console
@@ -933,14 +920,8 @@ def get_full_version() -> Optional[Tuple[Dict, Dict]]:
     from google.protobuf.internal import api_implementation
     from grpc import _grpcio_metadata
 
-    from jina import (
-        __docarray_version__,
-        __jina_env__,
-        __proto_version__,
-        __unset_msg__,
-        __uptime__,
-        __version__,
-    )
+    from jina import (__docarray_version__, __jina_env__, __proto_version__,
+                      __unset_msg__, __uptime__, __version__)
     from jina.logging.predefined import default_logger
 
     try:

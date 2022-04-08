@@ -3,10 +3,11 @@
 import functools
 import inspect
 from functools import wraps
-from typing import Callable, Union, List, Optional, Dict, Sequence, TYPE_CHECKING
+from typing import (TYPE_CHECKING, Callable, Dict, List, Optional, Sequence,
+                    Union)
 
-from jina.serve.executors.metas import get_default_metas
 from jina.helper import convert_tuple_to_list, iscoroutinefunction
+from jina.serve.executors.metas import get_default_metas
 
 if TYPE_CHECKING:
     from jina import DocumentArray
@@ -87,7 +88,7 @@ def requests(
     :param on: the endpoint string, by convention starts with `/`
     :return: decorated function
     """
-    from jina import __default_endpoint__, __args_executor_func__
+    from jina import __args_executor_func__, __default_endpoint__
 
     class FunctionMapper:
         def __init__(self, fn):

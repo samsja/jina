@@ -1,6 +1,6 @@
 import pytest
 
-from jina import Flow, Executor
+from jina import Executor, Flow
 
 
 class MyExecutor(Executor):

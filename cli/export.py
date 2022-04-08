@@ -55,9 +55,10 @@ def api_to_dict(show_all_args: bool = False):
 
 
 def _export_parser_args(parser_fn, type_as_str: bool = False, **kwargs):
-    from jina.enums import BetterEnum
     from argparse import _StoreAction, _StoreTrueAction
-    from jina.parsers.helper import KVAppendAction, _SHOW_ALL_ARGS
+
+    from jina.enums import BetterEnum
+    from jina.parsers.helper import _SHOW_ALL_ARGS, KVAppendAction
 
     port_attr = ('help', 'choices', 'default', 'required', 'option_strings', 'dest')
     parser = parser_fn(**kwargs)

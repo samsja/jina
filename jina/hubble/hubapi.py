@@ -8,12 +8,8 @@ from typing import Tuple
 
 from jina.helper import random_identity
 from jina.hubble import HubExecutor
-from jina.hubble.helper import (
-    get_hub_packages_dir,
-    install_requirements,
-    is_requirements_installed,
-    unpack_package,
-)
+from jina.hubble.helper import (get_hub_packages_dir, install_requirements,
+                                is_requirements_installed, unpack_package)
 
 
 def get_dist_path(uuid: str, tag: str) -> Tuple[Path, Path]:

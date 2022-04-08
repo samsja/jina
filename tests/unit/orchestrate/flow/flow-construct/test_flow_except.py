@@ -2,11 +2,11 @@ import os
 
 import numpy as np
 import pytest
+from docarray.document.generators import from_ndarray
 
-from jina import Flow, Executor, requests, Document
+from jina import Document, Executor, Flow, requests
 from jina.excepts import RuntimeFailToStart
 from jina.proto import jina_pb2
-from docarray.document.generators import from_ndarray
 from tests import validate_callback
 
 

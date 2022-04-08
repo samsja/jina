@@ -9,14 +9,14 @@ import grpc
 import pytest
 from grpc import RpcError
 
-from jina import DocumentArray, Document
+from jina import Document, DocumentArray
 from jina.clients.request import request_generator
 from jina.enums import PollingType
 from jina.parsers import set_pod_parser
+from jina.proto import jina_pb2_grpc
 from jina.serve.networking import GrpcConnectionPool
 from jina.serve.runtimes.asyncio import AsyncNewLoopRuntime
 from jina.serve.runtimes.head import HeadRuntime
-from jina.proto import jina_pb2_grpc
 from jina.types.request import Request
 from jina.types.request.control import ControlRequest
 from jina.types.request.data import DataRequest

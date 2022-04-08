@@ -2,7 +2,7 @@ import os
 
 import pytest
 
-from jina import Document, requests, Executor, Flow
+from jina import Document, Executor, Flow, requests
 from tests import random_docs, validate_callback
 
 cur_dir = os.path.dirname(os.path.abspath(__file__))

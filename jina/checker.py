@@ -13,9 +13,10 @@ class NetworkChecker:
         :param args: args provided by the CLI.
         """
 
+        import time
+
         from jina.logging.profile import TimeContext
         from jina.serve.runtimes.worker import WorkerRuntime
-        import time
 
         ctrl_addr = f'{args.host}:{args.port}'
         try:

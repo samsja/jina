@@ -1,5 +1,6 @@
 from jina.clients.base.http import HTTPBaseClient
-from jina.clients.mixin import AsyncPostMixin, PostMixin, MutateMixin, AsyncMutateMixin
+from jina.clients.mixin import (AsyncMutateMixin, AsyncPostMixin, MutateMixin,
+                                PostMixin)
 
 
 class HTTPClient(HTTPBaseClient, PostMixin, MutateMixin):

@@ -1,5 +1,7 @@
 import argparse
-from jina.parsers.orchestrate.runtimes.container import mixin_container_runtime_parser
+
+from jina.parsers.orchestrate.runtimes.container import \
+    mixin_container_runtime_parser
 
 
 def test_runtime_parser():

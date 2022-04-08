@@ -2,7 +2,7 @@ import random
 
 import pytest
 
-from jina import Flow, Executor, requests, Document
+from jina import Document, Executor, Flow, requests
 from tests import random_docs, validate_callback
 
 

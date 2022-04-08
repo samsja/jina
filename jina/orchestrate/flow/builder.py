@@ -1,12 +1,12 @@
 from functools import wraps
-from typing import List, TYPE_CHECKING
+from typing import TYPE_CHECKING, List
 
 from jina.excepts import FlowBuildLevelError
 
 # noinspection PyUnreachableCode
 if TYPE_CHECKING:
-    from jina.orchestrate.flow.base import Flow
     from jina.enums import FlowBuildLevel
+    from jina.orchestrate.flow.base import Flow
 
 
 def allowed_levels(levels: List['FlowBuildLevel']):

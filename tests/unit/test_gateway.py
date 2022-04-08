@@ -5,7 +5,7 @@ from threading import Thread
 import numpy as np
 import pytest
 
-from jina import Document, Client, Flow
+from jina import Client, Document, Flow
 from jina.enums import CompressAlgo
 from tests import random_docs
 

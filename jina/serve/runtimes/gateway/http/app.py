@@ -6,11 +6,8 @@ from typing import TYPE_CHECKING, Dict, List, Optional
 from jina import __version__
 from jina.clients.request import request_generator
 from jina.enums import DataInputType
-from jina.helper import (
-    GRAPHQL_MIN_DOCARRAY_VERSION,
-    docarray_graphql_compatible,
-    get_full_version,
-)
+from jina.helper import (GRAPHQL_MIN_DOCARRAY_VERSION,
+                         docarray_graphql_compatible, get_full_version)
 from jina.importer import ImportExtensions
 from jina.logging.logger import JinaLogger
 from jina.logging.profile import used_memory_readable
@@ -42,11 +39,8 @@ def get_fastapi_app(
         from starlette.requests import Request
 
         from jina.serve.runtimes.gateway.http.models import (
-            JinaEndpointRequestModel,
-            JinaRequestModel,
-            JinaResponseModel,
-            JinaStatusModel,
-        )
+            JinaEndpointRequestModel, JinaRequestModel, JinaResponseModel,
+            JinaStatusModel)
 
     docs_url = '/docs'
     app = FastAPI(
@@ -78,10 +72,8 @@ def get_fastapi_app(
             'CORS is enabled. This service is now accessible from any website!'
         )
 
-    from jina.serve.runtimes.gateway.request_handling import (
-        handle_request,
-        handle_result,
-    )
+    from jina.serve.runtimes.gateway.request_handling import (handle_request,
+                                                              handle_result)
     from jina.serve.stream import RequestStreamer
 
     streamer = RequestStreamer(
@@ -262,14 +254,10 @@ def get_fastapi_app(
             from dataclasses import asdict
 
             import strawberry
-            from docarray.document.strawberry_type import (
-                JSONScalar,
-                StrawberryDocument,
-                StrawberryDocumentInput,
-            )
-            from strawberry.fastapi import GraphQLRouter
-
             from docarray import DocumentArray
+            from docarray.document.strawberry_type import (
+                JSONScalar, StrawberryDocument, StrawberryDocumentInput)
+            from strawberry.fastapi import GraphQLRouter
 
             async def get_docs_from_endpoint(
                 data, target_executor, parameters, exec_endpoint

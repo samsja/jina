@@ -1,7 +1,9 @@
 import argparse
+
 import pytest
-from jina.parsers.hubble.push import mixin_hub_push_parser
+
 from jina.parsers.hubble.pull import mixin_hub_pull_parser
+from jina.parsers.hubble.push import mixin_hub_push_parser
 
 
 def test_push_parser(tmpdir):

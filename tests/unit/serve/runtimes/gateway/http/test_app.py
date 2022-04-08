@@ -14,7 +14,8 @@ from jina.logging.logger import JinaLogger
 from jina.parsers import set_gateway_parser
 from jina.serve.networking import GrpcConnectionPool
 from jina.serve.runtimes.gateway import TopologyGraph
-from jina.serve.runtimes.gateway.http import HTTPGatewayRuntime, get_fastapi_app
+from jina.serve.runtimes.gateway.http import (HTTPGatewayRuntime,
+                                              get_fastapi_app)
 from jina.serve.runtimes.gateway.websocket import WebSocketGatewayRuntime
 
 

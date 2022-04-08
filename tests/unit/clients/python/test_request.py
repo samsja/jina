@@ -3,8 +3,8 @@ import sys
 
 import numpy as np
 import pytest
-
 from docarray import Document
+
 from jina import Flow
 from jina.clients.request import request_generator
 from jina.clients.request.helper import _new_doc_from_data

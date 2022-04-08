@@ -1,30 +1,21 @@
 import time
 import typing
 from functools import wraps
-from typing import Optional, Union, Callable
+from typing import Callable, Optional, Union
 
 if typing.TYPE_CHECKING:
     from jina.logging.logger import JinaLogger
 
+from rich.console import Console
+from rich.progress import (BarColumn, Progress, ProgressColumn, SpinnerColumn,
+                           Task, TaskID, TextColumn, TimeElapsedColumn,
+                           TimeRemainingColumn)
+from rich.table import Column
+from rich.text import Text
 
 from jina import __windows__
-from jina.helper import get_readable_size, get_readable_time, colored, get_rich_console
-
-from rich.progress import (
-    Progress,
-    Task,
-    BarColumn,
-    TimeRemainingColumn,
-    SpinnerColumn,
-    TimeElapsedColumn,
-    TextColumn,
-    ProgressColumn,
-    TaskID,
-)
-
-from rich.text import Text
-from rich.table import Column
-from rich.console import Console
+from jina.helper import (colored, get_readable_size, get_readable_time,
+                         get_rich_console)
 
 
 def used_memory(unit: int = 1024 * 1024 * 1024) -> float:

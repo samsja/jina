@@ -3,7 +3,8 @@ from typing import Dict
 
 import pytest
 
-from jina.orchestrate.deployments.config.k8slib.kubernetes_tools import get_yaml
+from jina.orchestrate.deployments.config.k8slib.kubernetes_tools import \
+    get_yaml
 
 
 @pytest.mark.parametrize(

@@ -10,32 +10,16 @@ from pathlib import Path
 from typing import Dict, Optional, Union
 
 from jina import __resources_path__, __version__
-from jina.helper import (
-    ArgNamespace,
-    colored,
-    get_request_header,
-    get_rich_console,
-    retry,
-)
+from jina.helper import (ArgNamespace, colored, get_request_header,
+                         get_rich_console, retry)
 from jina.hubble import HubExecutor
-from jina.hubble.helper import (
-    archive_package,
-    disk_cache_offline,
-    download_with_resume,
-    get_cache_db,
-    get_download_cache_dir,
-    get_hubble_url_v2,
-    parse_hub_uri,
-    upload_file,
-)
-from jina.hubble.hubapi import (
-    dump_secret,
-    get_dist_path_of_executor,
-    get_lockfile,
-    install_local,
-    install_package_dependencies,
-    load_secret,
-)
+from jina.hubble.helper import (archive_package, disk_cache_offline,
+                                download_with_resume, get_cache_db,
+                                get_download_cache_dir, get_hubble_url_v2,
+                                parse_hub_uri, upload_file)
+from jina.hubble.hubapi import (dump_secret, get_dist_path_of_executor,
+                                get_lockfile, install_local,
+                                install_package_dependencies, load_secret)
 from jina.importer import ImportExtensions
 from jina.logging.logger import JinaLogger
 from jina.parsers.hubble import set_hub_parser
